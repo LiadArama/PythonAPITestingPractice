@@ -42,6 +42,7 @@ class APIClient():
         self._log_response(response)
         return response.json(), response.status_code
 
+
     def get_request(self, endpoint , params=None): # If needed we can supply a payload, otherwise we can specify the resource in the end of the endpoint url
         self._log_request("GET", f"{self.base_url}{endpoint}", params=params) # We MUST explicit specify params=params to let python know to reference them to **kwargs
         response = requests.get(f"{self.base_url}{endpoint}")
