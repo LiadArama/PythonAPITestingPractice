@@ -24,7 +24,7 @@ class APIClient():
         self.class_logger = self.logger.class_logger
 
     # Log request, the method we used, and the data we used
-    def _log_request(self, method, url, **kwargs): # **kwargs is like spreading a list of multiple params. can take indefinitely amount of params
+    def _log_request(self, method, url, **kwargs): # **kwargs is like spreading a dict of multiple params. can take indefinitely amount of params
         self.main_log.info(f" Method = [ {method} ] <----> URL = [ {url} ]")
         self.class_logger.info(f" Method = [ {method} ] <----> URL = [ {url} ]")
         if "params" in kwargs:
